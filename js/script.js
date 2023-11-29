@@ -5,13 +5,13 @@ const secondsEl = document.querySelector('span#secondi');
 
 
 
-const newYearsEveDate = new Date( 2024, 0, 1, 0, 0, 0, 0);
-console.log(newYearsEveDate);
+const newYearsDate = new Date( 2024, 0, 1, 0, 0, 0, 0);
+console.log(newYearsDate);
 
 const timer = setInterval( function(){
     
     const nowDate = new Date();
-    const dateDifference = newYearsEveDate.getTime() - nowDate.getTime();
+    const dateDifference = newYearsDate.getTime() - nowDate.getTime();
 
     secondsEl.innerHTML = Math.floor((dateDifference % (60 * 1000)) / 1000);
     minutesEl.innerHTML = Math.floor((dateDifference % (60 * 60 * 1000)) / (1000 * 60));
